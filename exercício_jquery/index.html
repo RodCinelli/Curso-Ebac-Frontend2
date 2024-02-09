@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas com jQuery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Minha Lista de Tarefas</h2> <!-- Movido para fora do container -->
+    <div class="task-container">
+        <img src="caminho_da_imagem_aqui.jpg" alt="Imagem Descrição" class="task-image">
+        <form id="task-form">
+            <input type="text" id="task-input" placeholder="Digite uma nova tarefa" required>
+            <button type="submit">Adicionar Tarefa</button>
+        </form>
+        <ol id="task-list">
+            <!-- As tarefas adicionadas aparecerão aqui -->
+        </ol>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

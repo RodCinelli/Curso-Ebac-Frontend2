@@ -1,0 +1,73 @@
+body {
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Centraliza o conteúdo verticalmente */
+}
+
+h2 {
+    position: absolute; /* Posicionamento absoluto para tirar do fluxo normal */
+    top: 50px; /* Distância do topo da página */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Ajuste fino para centralização exata */
+}
+
+.task-container {
+    width: 40%;
+    min-height: 500px;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Margens automáticas removidas para manter a centralização pelo flex do body */
+}
+
+.task-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+#task-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px; /* Espaço adicional abaixo do formulário */
+}
+
+#task-input {
+    flex-grow: 1;
+    padding: 10px; /* Aumenta o padding para mais espaço interno */
+    font-size: 16px; /* Aumenta a fonte para melhor legibilidade */
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    width: 400px; /* Garante que o campo ocupe todo o espaço disponível */
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+li {
+    cursor: pointer;
+    margin: 5px 0;
+}
+
+li.done {
+    text-decoration: line-through;
+}
