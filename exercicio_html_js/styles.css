@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+#form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    color: #007BFF;
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    margin-bottom: 50px;
+}
+
+label {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+#myForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+}
+
+input[type="number"] {
+    padding: 10px;
+    border: 2px solid #4285f4; /* azul suave */
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+    outline: none;
+    background-color: #e8f0fe; /* azul suave */
+}
+
+input[type="number"]:focus {
+    border-color: #4285f4; /* azul mais forte */
+    box-shadow: 0 0 10px #4285f4;
+}
+
+input[type="number"]::placeholder {
+    text-align: center;
+  }
+
+input[type="submit"],
+input[type="button"] {
+    cursor: pointer;
+    padding: 10px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"] {
+    background-color: #28a745;
+}
+
+input[type="button"] {
+    background-color: #dc3545;
+    margin-top: 10px;
+}
+
+input[type="submit"]:hover,
+input[type="button"]:hover {
+    opacity: 0.8;
+}
+
+#message {
+    margin-top: 50px;
+    padding: 10px;
+    color: #fff;
+    border-radius: 5px;
+}
+
+#message.valid {
+    background-color: #28a745;
+}
+
+#message.invalid {
+    background-color: #dc3545;
+}
