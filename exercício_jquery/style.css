@@ -1,5 +1,5 @@
 body {
-    background-color: #f5f5f5;
+    background-color: #f0f2f5; /* Um cinza claro suave */
     margin: 0;
     padding: 0;
     min-height: 100vh;
@@ -9,45 +9,70 @@ body {
     justify-content: center; /* Centraliza o conteúdo verticalmente */
 }
 
+@keyframes typing {
+    0% { width: 0; }
+    50% { width: 90%; } /* Altera para 90% para que não vá até o limite */
+    100% { width: 0; }
+}
+
 h2 {
-    position: absolute; /* Posicionamento absoluto para tirar do fluxo normal */
-    top: 50px; /* Distância do topo da página */
-    left: 50%; /* Centraliza horizontalmente */
-    transform: translateX(-50%); /* Ajuste fino para centralização exata */
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-right: .15em solid orange; /* Simula um cursor */
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0; /* A largura começa em 0 */
+    animation: typing 6s steps(40, end) infinite, blink-caret .75s step-end infinite;
+    color: #007bff;
+    font-size: 2em;
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
 }
 
 .task-container {
     width: 40%;
     min-height: 500px;
-    background-color: white;
+    background: linear-gradient(to bottom, #ffffff, #e9ecef); /* Gradiente suave de branco para cinza claro */
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     border-radius: 8px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* Margens automáticas removidas para manter a centralização pelo flex do body */
 }
 
 .task-image {
-    max-width: 100%;
+    max-width: 100px; /* Ajuste conforme necessário */
     height: auto;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+    border: 1px solid #dee2e6;
+    border-radius: 50%; /* Para tornar a imagem circular */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 #task-form {
     display: flex;
     gap: 10px;
-    margin-bottom: 20px; /* Espaço adicional abaixo do formulário */
+    margin-bottom: 20px;
 }
 
 #task-input {
     flex-grow: 1;
-    padding: 10px; /* Aumenta o padding para mais espaço interno */
-    font-size: 16px; /* Aumenta a fonte para melhor legibilidade */
+    padding: 10px;
+    font-size: 16px;
     border: 2px solid #ccc;
     border-radius: 4px;
-    width: 400px; /* Garante que o campo ocupe todo o espaço disponível */
+    transition: border-color 0.3s; /* Suaviza a transição da borda */
+}
+
+#task-input:focus {
+    border-color: #007bff; /* Cor da borda ao focar */
+    outline: none; /* Remove o contorno padrão para navegadores que o aplicam */
 }
 
 button {
@@ -57,17 +82,102 @@ button {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    transition: box-shadow 0.3s, background-color 0.3s; /* Suaviza as transições */
 }
 
 button:hover {
     background-color: #0056b3;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Efeito de sombra ao passar o mouse */
+}
+
+.delete-task-btn {
+    padding: 5px 10px;
+    margin-left: 10px; /* Espaçamento entre o texto da tarefa e o botão */
+    font-size: 0.8em; /* Tamanho da fonte ajustado para se adequar ao design */
+    border: none;
+    border-radius: 4px;
+    background-color: #dc3545; /* Cor de fundo vermelha para ação de excluir */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.delete-task-btn:hover {
+    background-color: #c82333; /* Cor mais escura ao passar o mouse */
 }
 
 li {
     cursor: pointer;
-    margin: 5px 0;
+    margin: 10px 0;
+    padding: 10px 15px; /* Mantém o ajuste no padding para espaço ao redor do texto */
+    font-size: 18px; /* Mantém o tamanho da fonte aumentado para melhor legibilidade */
+    font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    transition: color 0.3s; /* Mantém a transição suave para mudanças de cor */
+    /* Removendo as propriedades que dão a aparência de container */
+    background-color: transparent; /* Remove o fundo */
+    border-radius: 0; /* Remove as bordas arredondadas */
+    box-shadow: none; /* Remove a sombra */
+}
+
+li:hover {
+    color: #007bff; /* Muda a cor ao passar o mouse */
 }
 
 li.done {
-    text-decoration: line-through;
+    text-decoration: line-through; /* Marca tarefas concluídas de forma clara */
 }
+
+footer {
+    width: 100%;
+    padding: 5px 5px;
+    background-color: #f8f9fa; /* Cor de fundo suave */
+    text-align: center;
+    font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    font-size: 16px; /* Tamanho da fonte para boa legibilidade */
+    color: #6c757d; /* Cor de texto suave */
+    border-top: 1px solid #eaeaea; /* Linha sutil na parte superior */
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.1); /* Sombra sutil para um efeito de elevação */
+    position: fixed; /* Fixa o footer na parte inferior da tela */
+    bottom: 0; /* Assegura que o footer fique no fim da tela */
+    left: 0; /* Alinha o footer à esquerda da tela */
+}
+
+/* Media Queries para dispositivos com largura máxima de 768px */
+@media (max-width: 768px) {
+    .task-container {
+        width: 90%; /* Ajusta a largura para ocupar mais espaço na tela */
+        min-height: 600px; /* Aumenta a altura mínima para dispositivos móveis */
+        padding: 15px; /* Ajusta o padding conforme necessário para o conteúdo interno */
+    }
+
+    .task-image {
+        max-width: 80px; /* Ajusta o tamanho da imagem para telas menores */
+        margin-bottom: 20px; /* Reduz o espaçamento abaixo da imagem */
+    }
+
+    #task-input, button {
+        font-size: 14px; /* Diminui o tamanho da fonte para uma melhor adaptação */
+    }
+
+    li {
+        font-size: 16px; /* Ajusta o tamanho da fonte dos itens da lista */
+        padding: 8px 10px; /* Reduz o padding para economizar espaço */
+    }
+
+    h2 {
+        font-size: 1.5em; /* Reduz o tamanho da fonte do título */
+        top: 35px; /* Ajusta a posição para ficar mais próximo do topo */
+    }
+
+    footer {
+        padding: 10px; /* Ajusta o padding do footer para economizar espaço */
+        font-size: 14px; /* Ajusta o tamanho da fonte para telas menores */
+    }
+}
+
+
+
+
+
+
+
