@@ -1,0 +1,182 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #d6d6d6; /* Fundo da página em um cinza médio-escuro */
+    margin: 0;
+    padding: 0;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 70%; /* Tamanho ajustado para ocupar todo o espaço disponível */
+    max-width: none; /* Removendo a restrição do tamanho máximo */
+}
+
+.container {
+    background: #ffffff; /* Fundo do container em branco para contraste claro */
+    padding: 100px;
+    padding-top: 20px;
+    padding-bottom: 30px; /* Ajustado para manter espaço no final do formulário */
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+    margin: 100px; /* Adiciona um pequeno espaço entre os containers */
+}
+
+h2 {
+    font-size: 22px;
+    color: #333;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 45px;
+    font-family: 'Helvetica Neue', sans-serif;
+    color: #5d647b;
+}
+
+.campo {
+    margin-bottom: 20px;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: #5d647b;
+}
+
+.campo input {
+    width: 100%; /* Reduz o tamanho para 80% */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 16px;
+    color: #333;
+    display: block;
+    margin: 0 auto 15px auto; /* Centraliza horizontalmente e mantém a margem inferior */
+}
+
+.ultimo-campo {
+    margin-bottom: 30px; /* ou a quantidade de espaçamento desejada */
+}
+
+.button {
+    width: 50%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px; /* Espaço entre os botões */
+    margin-left: auto; /* Centralizando horizontalmente */
+    margin-right: auto; /* Centralizando horizontalmente */
+    display: block;
+}
+
+.button:hover {
+    background-color: #45a049;
+}
+
+/* Estilização específica para o botão Limpar, se necessário */
+#btnLimpar {
+    background-color: #f44336; /* Cor vermelha para o botão de limpar */
+}
+
+#btnLimpar:hover {
+    background-color: #d32f2f;
+}
+
+/* Adicionando um pouco de estilo aos inputs quando estiverem focados */
+.campo input:focus {
+    border-color: #4CAF50;
+    outline: none; /* Remove o contorno padrão do Firefox e do Chrome */
+}
+
+.delete-icon {
+    cursor: pointer;
+    margin-left: 10px;
+    color: #d11a2a;
+}
+
+.usuario-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Estilos para dispositivos com largura até 768px (tablets e smartphones) */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column; /* Os containers agora ficarão um abaixo do outro */
+        align-items: center;
+        width: 90%; /* Ocupa mais espaço da tela em dispositivos menores */
+        margin: 50px
+        0; /* Reduz a margem entre containers */
+    }
+
+    .container {
+        padding: 50px; /* Reduz o preenchimento para não ocupar muito espaço */
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin: 20px 0; /* Reduz a margem entre containers para uma melhor visualização */
+    }
+
+    h2 {
+        font-size: 20px; /* Reduz um pouco o tamanho da fonte dos cabeçalhos */
+        margin-bottom: 30px; /* Reduz a margem abaixo dos cabeçalhos */
+    }
+
+    .campo input,
+    .button {
+        width: 100%; /* Faz com que os inputs e botões ocupem toda a largura disponível */
+    }
+
+    .button {
+        padding: 10px; /* Reduz um pouco o padding dos botões para melhorar a aparência */
+        margin-top: 10px; /* Reduz a margem superior dos botões */
+    }
+
+    /* Ajusta a margem inferior do último campo para que o botão não fique muito próximo */
+    .ultimo-campo {
+        margin-bottom: 20px;
+    }
+}
+
+/* Estilos para dispositivos com largura até 480px (smartphones) */
+@media (max-width: 480px) {
+    .container {
+        padding: 30px; /* Reduz ainda mais o preenchimento para dispositivos muito pequenos */
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    h2 {
+        font-size: 18px; /* Reduz ainda mais o tamanho da fonte dos cabeçalhos */
+    }
+
+    .campo label {
+        font-size: 14px; /* Reduz o tamanho da fonte dos rótulos */
+    }
+
+    .campo input {
+        padding: 8px; /* Reduz o padding dos inputs para economizar espaço */
+        font-size: 14px; /* Reduz o tamanho da fonte dentro dos inputs */
+    }
+
+    .button {
+        padding: 8px; /* Reduz o padding dos botões */
+        font-size: 16px; /* Reduz o tamanho da fonte dos botões */
+        margin-top: 10px; /* Reduz a margem superior dos botões */
+    }
+}
+
+
+
+
