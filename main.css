@@ -1,0 +1,62 @@
+time {
+    display: block;
+}
+
+.post {
+    margin-bottom: 24px;
+}
+
+/* Transições suaves para botões */
+.btn {
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #0056b3; /* Um tom mais escuro para o botão azul */
+}
+
+.btn-custom-success {
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.btn-custom-success:hover {
+    background-color: #218838; /* Um tom de verde mais escuro para o hover */
+    box-shadow: 0 0 8px rgba(40,167,69,.5); /* Adiciona um glow ao redor do botão no hover */
+}
+
+/* Animações para alertas */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.alert {
+    animation: fadeIn 1s;
+}
+
+/* Efeitos de hover em imagens */
+.post img, .img-hover-effect {
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+.post img:hover, .img-hover-effect:hover {
+    transform: scale(1.05);
+    filter: brightness(80%);
+}
+
+/* Formulários com estilo aprimorado */
+input.form-control, textarea.form-control {
+    border: 1px solid #ced4da;
+    transition: border-color 0.3s ease-in-out;
+}
+
+input.form-control:focus, textarea.form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+
