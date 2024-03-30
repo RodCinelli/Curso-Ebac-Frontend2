@@ -1,0 +1,12 @@
+@mixin flex-center-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin grid-products($columns, $columnGap: 1%, $rowGap: 4%) {
+    display: grid;
+    grid-template-columns: repeat($columns, 32.66%);
+    column-gap: $columnGap;
+    row-gap: $rowGap;
+}
