@@ -15,8 +15,10 @@
 }
 
 body {
-    background-color: #colors[backgroudColor];
     color: #colors[textColor];
+    background-image: url('/src/images/fundo4.png'); // Ajuste o caminho conforme necessário
+    background-size: cover; // Faz com que a imagem de fundo cubra todo o body
+    background-position: center; // Centraliza a imagem de fundo
 }
 
 li {
@@ -48,9 +50,12 @@ header {
 
     .profile-avatar {
         display: block;
-        margin: 0 auto 24px;
-        border-radius: 50%;
-    }
+        margin: 0 auto 24px; // Centraliza a imagem e adiciona margem abaixo dela
+        border-radius: 50%; // Deixa a imagem com bordas arredondadas, criando um efeito de círculo
+        width: 120px; // Define a largura da imagem
+        height: 120px; // Define a altura da imagem
+        object-fit: cover; // Garante que a imagem cubra todo o espaço sem distorção
+    }    
 }
 
 .profile-bio {
@@ -82,8 +87,6 @@ header {
     .marginBotton8();
 
     li {
-        
-
         img {
             transition: all ease .3s;
             &:hover {
@@ -104,14 +107,14 @@ header {
             padding: 16px 20px;
             margin-bottom: 16px;
             text-align: center;
-            color: #colors[textColor];
+            color: #colors[textColorSecundaria];
             font-weight: bold;
             border-radius: 30px;
             border: 2px solid #colors[buttonColor];
             transition: all ease .5s;
 
             &:hover {
-                color: #colors[buttonColor];
+                color: #colors[textColorSecundaria];
                 background-color: transparent;
             }
         }

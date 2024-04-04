@@ -8,8 +8,10 @@
   font-family: Roboto, sans-serif;
 }
 body {
-  background-color: #192a56;
-  color: #f5f6fa;
+  color: #FF7F50;
+  background-image: url('/src/images/fundo4.png');
+  background-size: cover;
+  background-position: center;
 }
 li {
   list-style: none;
@@ -40,6 +42,9 @@ header .profile-avatar {
   display: block;
   margin: 0 auto 24px;
   border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
 }
 .profile-bio {
   text-align: center;
@@ -76,18 +81,18 @@ header .profile-avatar {
 }
 .projects-list-item a {
   text-decoration: none;
-  background-color: #0097e6;
+  background-color: #00000081;
   display: block;
   padding: 16px 20px;
   margin-bottom: 16px;
   text-align: center;
-  color: #f5f6fa;
+  color: #FF8C00;
   font-weight: bold;
   border-radius: 30px;
-  border: 2px solid #0097e6;
+  border: 2px solid #00000081;
   transition: all ease 0.5s;
 }
 .projects-list-item a:hover {
-  color: #0097e6;
+  color: #FF8C00;
   background-color: transparent;
 }
