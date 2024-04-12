@@ -1,0 +1,34 @@
+.produtos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; // Espaçamento fixo entre produtos
+    justify-content: space-around;
+}
+
+.produto {
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: calc(33% - 40px); // Ajuste para 3 itens por linha com espaçamento
+
+    &__imagem {
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    &__nome {
+        font-size: 1.5em;
+        color: #333;
+        margin-bottom: 5px;
+    }
+
+    &__descricao {
+        font-size: 1em;
+        color: #666;
+    }
+
+    &--destaque {
+        background-color: #ffffcc;
+        border-color: #ffd700;
+    }
+}
